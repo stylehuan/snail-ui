@@ -3,7 +3,7 @@
  * @author  stylehuan
  * @create  2017-04-05 09:50
  */
-import toastConstructor from "./src/toast"
+import toastConstructor from "./toast"
 let instances = [];
 let seed = 1;
 let defaultZindex = 3000;

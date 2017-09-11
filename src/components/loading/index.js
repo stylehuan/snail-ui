@@ -3,7 +3,7 @@
  * @author  stylehuan
  * @create  2017-04-05 09:50
  */
-import LoadingConstructor from "./src/loading.vue"
+import LoadingConstructor from "./loading.vue"
 let _instance;
 let plugin = {
     install(vue, options){

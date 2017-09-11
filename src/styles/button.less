@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import "var";
+
+.snail_btn {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  border: none;
+  outline: 0;
+  -webkit-appearance: none;
+}
+
+.snail_btn_default {
+  background-color: @primaryColor;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  font-size: 36px;
+  line-height: 80px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.snail_btn_touch {
+  background-color: #9ED99D;
+}
+
+.snail_btn_disabled.snail_btn_default {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #F7F7F7;
+}

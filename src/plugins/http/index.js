@@ -19,6 +19,7 @@ export default {
             let _error = options.error || emptyFn;
             let _beforeSend = options.beforeSend || emptyFn;
             let _complete = options.complete || emptyFn;
+            let _isMode = options.isMode || false;
             if (options.url == "") return;
             let config = {
                 method: _method,
@@ -34,6 +35,9 @@ export default {
             }
             if (_headers) {
                 config.headers = _headers;
+            }
+            if (_isMode) {
+                config.headers['Content-Type'] = 'application/x-www-form-urlencoded';
             }
             _beforeSend();
             console.log("--ajaxSend--", _url);
@@ -58,18 +62,11 @@ export default {
         let _snail = Vue.prototype.$snail;
         if (!_snail) {
             _snail = {
-                net: {
-
-                }
+                http: ajax
             };
         } else {
-            if (!_snail.net) {
-                _snail.net = {
-                    http: ajax
-                }
-            } else {
-                _snail.net.http = ajax;
-            }
+            _snail.http = ajax;
         }
+        Vue.prototype.$snail = _snail;
     }
 }

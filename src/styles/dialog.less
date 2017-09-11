@@ -1,0 +1,86 @@
+@import "./mixins";
+
+.bee_dialog {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.bee_dialog_box {
+  width: 87%;
+  margin: 0 auto;
+  font-size: 24px;
+}
+
+.bee_dialog_footer {
+  text-align: center;
+  position: relative;
+}
+
+.bee_dialog_default {
+  background-color: #fafafc;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 20px;
+
+  .bee_dialog_main {
+    padding: 25px;
+    .bee_dialog_body {
+      position: relative;
+      text-align: center;
+      font-size: 30px;
+
+      .bee_dialog_header {
+        border-bottom: 2px solid #e1e1e1;
+        line-height: 64px;
+        padding-bottom: 15px;
+        position: relative;
+        .title {
+          text-align: center;
+          font-size: 34px;
+        }
+        .bee_dialog_close {
+          position: absolute;
+          right: 0;
+          top: 0;
+          font-size: 40px;
+        }
+      }
+
+    }
+  }
+
+  .bee_dialog_footer {
+    display: flex;
+    .bee_dialog_cancel_button, .bee_dialog_confirm_button {
+      font-size: 40px;
+      font-weight: 700;
+      flex: 1;
+      border-radius: 10px;
+      display: block;
+      height: 72px;
+      line-height: 72px;
+      margin: 0 10px;
+    }
+    .bee_dialog_cancel_button {
+      background-color: #ddd;
+      color: #676767;
+    }
+    .bee_dialog_confirm_button {
+      background-color: #70c900;
+      color: #fff;
+    }
+  }
+}
+
+.bee-dialog-enter {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.185) !important;
+}
+
+.bee-dialog-enter-active {
+  transition: transform .5s;
+}
